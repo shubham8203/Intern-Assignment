@@ -1,0 +1,272 @@
+.table-container{
+ width:100%;
+ height:max-content;
+
+}
+
+
+
+
+.head-cell-border{
+ 
+    border-right:1px solid white;
+   
+  
+    
+}
+.head-cell{
+  background-color: rgb(128, 127, 127);
+    filter:blur(50%);
+   
+   
+}
+.head-cell-0 {
+      border-top-left-radius: 20px;
+
+     
+      
+}
+.head-cell-1 {
+    width:100px;
+
+   
+}
+.head-cell-2 {
+    width:100px;
+
+  
+}
+.head-cell-3 {
+  width:max-content;
+  min-width: 300px;
+
+ 
+
+}
+.name-email-filter{
+  display: flex;
+  gap:4px;
+}
+.name-filter{
+  width:150px;
+  >.MuiInputBase-root{
+    width:100%;
+  }
+}
+.head-cell-4 {
+
+ 
+    width:max-content;
+    /* display: flex;
+    flex-direction: column;
+   align-items: center; */
+   
+    min-width: 100px;
+}
+.filter>.MuiInputBase-root{
+  max-width: 150px;
+  height:40px;
+  font-size: 14px;
+  padding:2px 4px;
+
+}
+.head-cell-5 {
+    width:max-content;
+    min-width: 130px;
+       
+   gap:5px;
+
+}
+.head-cell-6 {
+   
+    padding:0 30px;
+
+   gap:5px;
+}
+.head-cell-7{
+    width:max-content;
+    min-width: 130px;
+    margin-top: 0px;
+    border-top-right-radius: 20px;
+    border:none;
+    
+}
+
+.checked{
+    background-color:rgb(115, 141, 253);
+     :is(.table-cell-1){
+      background-color:rgb(115, 141, 253);
+      color:rgb(48, 25, 52);
+    }
+     :is(.table-cell-3>.user-info>.name){
+      background-color:rgb(115, 141, 253);
+      color:rgb(48, 25, 52);
+    }
+    &:hover :is(.table-cell-3>.user-info>.email){
+      background-color:rgb(115, 141, 253);
+      color:rgb(87, 41, 95);
+    }
+}
+.body{
+    height:max-content;
+    cursor:pointer;
+    &:hover{
+      background-color: rgb(115, 141, 253);
+  
+    }
+    &:hover :is(.table-cell-1){
+      background-color:rgb(115, 141, 253);
+      color:rgb(48, 25, 52);
+    }
+    &:hover :is(.table-cell-3>.user-info>.name){
+      background-color:rgb(115, 141, 253);
+      color:rgb(48, 25, 52);
+    }
+    &:hover :is(.table-cell-3>.user-info>.email){
+      background-color:rgb(115, 141, 253);
+      color:rgb(87, 41, 95);
+    }
+}
+.status{
+    height:2rem;
+    width:2rem;
+}
+.profile{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+
+.table-cell-1{
+  color:rgb(249, 111, 235);
+  font-size: 18px;
+
+  
+}
+.table-cell-3{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+   
+    
+
+   >.user-info{
+     >.name{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color:rgb(115, 115, 115);
+     }
+     >.email{
+        color:rgb(74, 73, 73);
+       
+     }
+   }
+}
+.table-cell-6{
+ 
+    >.paid-btn{
+       width:max-content;
+       font-size: 18px;
+       color:rgb(3, 253, 3);
+       background-color: rgb(197, 249, 197);
+       padding:4px 18px;
+       border-radius: 20px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+.table-main{
+    position:relative;
+}
+.table-header{
+    position:sticky;
+    top:0px;
+    z-index: 20;
+    
+
+}
+
+  
+  /* Responsive for tablet (max-width: 768px) */
+  @media (max-width: 768px) {
+    .table-container {
+      width: 95%;
+      margin: auto;
+    }
+  
+    .table-cell-1, .table-cell-2, .table-cell-4, .table-cell-5, .table-cell-6, .table-cell-7 {
+      padding: 8px;
+      font-size: 0.875rem; /* Smaller font size for better readability */
+    }
+  
+    .profile {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .status {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .head-cell {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .user-info .name {
+      font-size: 0.9rem; /* Slightly smaller client name on tablet */
+    }
+  
+    .user-info .email {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* Responsive for mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .table-container {
+      width: 100%;
+      margin: auto;
+    }
+  
+    .table {
+      font-size: 0.75rem; /* Smaller font size for mobile devices */
+    }
+  
+    .table-cell-1, .table-cell-2, .table-cell-4, .table-cell-5, .table-cell-6, .table-cell-7 {
+      padding: 6px;
+      font-size: 0.75rem; /* Further reduced font size for small screens */
+    }
+    .table-cell-0{
+        display:none;
+    }
+  
+    .profile {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .status {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .head-cell {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+    .head-cell-0{
+        display:none;
+    }
+  
+    .user-info .name {
+      font-size: 0.8rem; /* Smaller client name */
+    }
+  
+    .user-info .email {
+      font-size: 0.7rem; /* Smaller email text */
+    }
+  }
+  
+
